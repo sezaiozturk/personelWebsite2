@@ -20,9 +20,9 @@ const typography = {
   },
 };
 const colors = {
-  primary: "orange",
-  secondary: "white",
-  myColor: "#4d78ca",
+  primary: "#f5df4e",
+  secondary: "#ffffff",
+  black: "#252b33",
 };
 const light = {
   key: "light",

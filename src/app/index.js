@@ -7,11 +7,21 @@ import {
 } from "ncore-web";
 import locales from "./locales";
 import themes from "./themes/";
+import useStyle from "./stylesheet";
+import Navigation from "./navigations";
+import { Header } from "./components";
+import { MENU } from "./constans";
 
 function App() {
   const { localize, activeLocale, switchLocale } = useNCoreLocalization();
   const { activeTheme, switchTheme } = useNCoreTheme();
-  return <div className="App">Sezai Öztürk</div>;
+  const classes = useStyle();
+  return (
+    <div className={classes.container}>
+      <Header menuData={MENU} />
+      <Navigation />
+    </div>
+  );
 }
 
 const ContextApi = () => {

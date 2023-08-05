@@ -2,7 +2,10 @@
   "code": "en",
   "isRTL": "false",
   "translations": {
-    "app-name": "portfolio",
-    "my-word-key": "My Word"
+    "home": "home",
+    "about": "about",
+    "resume": "resume",
+    "portfolio": "portfolio",
+    "contact": "contact"
   }
 }
