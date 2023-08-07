@@ -1,8 +1,9 @@
-import { WelcomeSection } from "./views";
+import { WelcomeSection, AboutSection } from "./views";
 const Home = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "white" }}>
       <WelcomeSection />
+      <AboutSection />
     </div>
   );
 };

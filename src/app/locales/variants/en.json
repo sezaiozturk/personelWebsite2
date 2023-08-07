@@ -6,6 +6,9 @@
     "about": "about",
     "resume": "resume",
     "portfolio": "portfolio",
-    "contact": "contact"
+    "contact": "contact",
+    "hello": "HELLO, I'M A",
+    "job": "DEVELOPER",
+    "works": "View My Works"
   }
 }

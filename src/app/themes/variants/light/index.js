@@ -15,8 +15,20 @@ const typography = {
     fontSize: 24,
   },
   title1: {
-    fontSize: 100,
-    color: "primary",
+    fontSize: 40,
+  },
+  title2: {
+    fontSize: 16,
+  },
+  title3: {
+    fontSize: "3.2rem",
+  },
+  title4: {
+    fontSize: 20,
+  },
+  text: {
+    fontSize: 25,
+    lineHeight: 1.5,
   },
 };
 const colors = {

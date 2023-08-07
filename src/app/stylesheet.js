@@ -39,12 +39,11 @@ const useStyle = createUseStyles(
       },
       body: {
         backgroundColor: "black",
+        boxSizing: "border-box",
+        minWidth: 375,
       },
     },
-    container: {
-      top: 64,
-      position: "relative",
-    },
+    container: {},
   },
   {
     name: "Global",
