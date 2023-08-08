@@ -4,10 +4,13 @@ const useStyle = createUseStyles(
   {
     container: {
       flexDirection: "column",
-      padding: "12rem 10rem",
+      padding: "5rem 10rem",
       display: "flex",
       height: "100%",
       gap: "5rem",
+      minHeight: "100vh",
+      justifyContent: "center",
+      alignItems: "center",
     },
     title: {
       justifyContent: "center",

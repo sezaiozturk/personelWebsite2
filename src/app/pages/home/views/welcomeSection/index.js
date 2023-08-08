@@ -3,8 +3,8 @@ import useStyle from "./stylesheet";
 import { Button, useNCoreLocalization, useNCoreTheme, Text } from "ncore-web";
 
 const WelcomeSection = () => {
-  const classes = useStyle();
   const { activeTheme, colors } = useNCoreTheme();
+  const classes = useStyle({ color: colors });
   const { localize } = useNCoreLocalization();
   return (
     <div className={classes.container}>
@@ -18,7 +18,8 @@ const WelcomeSection = () => {
             <Button
               title={localize("works")}
               spreadBehaviour="free"
-              size="small"
+              size="medium"
+              textColor="black"
             />
           </div>
           <button className={classes.scrool}>

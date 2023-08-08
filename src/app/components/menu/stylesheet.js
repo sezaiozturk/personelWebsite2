@@ -22,7 +22,7 @@ const useStyle = createUseStyles(
         visibility: "hidden",
         content: "''",
         left: "50%",
-        bottom: 15,
+        bottom: -5,
         width: 0,
       },
       "& a:hover": {

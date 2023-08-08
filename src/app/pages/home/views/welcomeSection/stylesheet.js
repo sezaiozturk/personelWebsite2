@@ -14,7 +14,7 @@ const useStyle = createUseStyles(
           borderColor: "transparent",
         },
         to: { borderColor: "transparent" },
-        "50%": { borderColor: "yellow" },
+        "50%": { borderColor: "white" },
       },
       "@keyframes scroolAnim": {
         from: {
@@ -31,6 +31,7 @@ const useStyle = createUseStyles(
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
+      backgroundAttachment: "fixed",
       height: "100%",
       width: "100%",
     },
@@ -71,8 +72,8 @@ const useStyle = createUseStyles(
       borderRight: ".3em solid orange",
       letterSpacing: ".15em",
       whiteSpace: "nowrap",
-      overflow: "hidden",
       margin: "0 auto",
+      overflow: "hidden",
       color: "white",
       "& span": {
         fontSize: 120,

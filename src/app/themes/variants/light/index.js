@@ -35,6 +35,7 @@ const colors = {
   primary: "#f5df4e",
   secondary: "#ffffff",
   black: "#252b33",
+  gray: "#E8E9E9",
 };
 const light = {
   key: "light",
