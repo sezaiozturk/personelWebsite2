@@ -6,7 +6,7 @@ const Title = ({ title }) => {
   const classes = useStyle({ color: colors });
   return (
     <div className={classes.container}>
-      <Text variant="title2">{title}</Text>
+      <Text variant="title5">{title}</Text>
     </div>
   );
 };

@@ -21,13 +21,27 @@ const useStyle = createUseStyles(
       gap: "1rem",
     },
     content: {
+      width: "100%",
       display: "flex",
-      width: "90%",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+      position: "relative",
+      "& div": {
+        display: "flex",
+        width: "90%",
+      },
     },
     cell: {
       flexDirection: "column",
       display: "flex",
       flex: 1,
+    },
+    hideContainer: {
+      position: "absolute",
+      bottom: 0,
+      backgroundColor: "white",
+      height: "2.5rem",
     },
     skillsContainer: {
       flexDirection: "column",

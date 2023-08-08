@@ -59,6 +59,10 @@ const useStyle = createUseStyles(
         display: "block",
       },
     },
+    contactContainer: {
+      display: "flex",
+      width: "100%",
+    },
     contact: {
       justifyContent: "space-between",
       display: "flex",

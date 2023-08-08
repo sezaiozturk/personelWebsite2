@@ -7,8 +7,8 @@ const SkillBar = ({ title, parcent }) => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <Text>{title}</Text>
-        <Text>{parcent}%</Text>
+        <Text variant="title5">{title}</Text>
+        <Text variant="title5">{parcent}%</Text>
       </div>
       <div className={classes.bar}>
         <div />

@@ -16,7 +16,7 @@ const useStyle = createUseStyles(
     },
     seperator: {
       backgroundColor: ({ color }) => color.gray,
-      margin: "2.5rem 5rem 2.5rem 2rem",
+      margin: "2.5rem 5rem 2.5rem 1rem",
       height: 1,
     },
   },
