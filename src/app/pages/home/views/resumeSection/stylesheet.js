@@ -5,7 +5,7 @@ const useStyle = createUseStyles(
     container: {
       justifyContent: "center",
       flexDirection: "column",
-      padding: "5rem 0rem",
+      padding: "5rem 6%",
       alignItems: "center",
       minHeight: "100vh",
       display: "flex",
@@ -21,40 +21,57 @@ const useStyle = createUseStyles(
       gap: "1rem",
     },
     content: {
-      width: "100%",
-      display: "flex",
       justifyContent: "center",
-      flexDirection: "column",
       alignItems: "center",
-      position: "relative",
-      "& div": {
-        display: "flex",
-        width: "90%",
-      },
+      display: "flex",
+      width: "100%",
     },
     cell: {
       flexDirection: "column",
+      position: "relative",
       display: "flex",
       flex: 1,
     },
     hideContainer: {
-      position: "absolute",
-      bottom: 0,
       backgroundColor: "white",
+      position: "absolute",
       height: "2.5rem",
+      width: "100%",
+      bottom: 0,
     },
     skillsContainer: {
       flexDirection: "column",
       display: "flex",
-      width: "90%",
+      width: "100%",
+      gap: "2rem",
     },
     skillsContent: {
       flexDirection: "column",
       display: "flex",
       gap: "2rem",
-      "& div": {
-        justifyContent: "space-between",
+    },
+    row: {
+      justifyContent: "space-between",
+      display: "flex",
+      gap: "4%",
+    },
+    "@media screen and (max-width:1000px)": {
+      content: {
+        flexDirection: "column",
+      },
+    },
+    "@media screen and (max-width:768px)": {
+      container: {
+        padding: "5rem 4%",
+      },
+      skillsContent: {
+        gap: "1rem",
+      },
+      row: {
+        justifyContent: "center",
+        flexDirection: "column",
         display: "flex",
+        gap: "1rem",
       },
     },
   },

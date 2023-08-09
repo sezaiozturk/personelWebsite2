@@ -16,26 +16,39 @@ const typography = {
   },
   title1: {
     fontSize: 40,
+    fontFamily: "poppins-semibold",
   },
   title2: {
     fontSize: 32,
   },
   title3: {
+    fontFamily: "poppins-semibold",
     fontSize: 28,
   },
   title4: {
+    fontFamily: "poppins-medium",
     fontSize: 21,
   },
   title5: {
+    fontFamily: "poppins-medium",
+    fontSize: 16,
+  },
+  title6: {
+    fontFamily: "poppins-regular",
     fontSize: 16,
   },
   text1: {
+    fontFamily: "poppins-regular",
+    lineHeight: "4rem",
     fontSize: 21,
   },
   text2: {
+    fontFamily: "poppins-semibold",
     fontSize: 18,
   },
   text3: {
+    fontFamily: "poppins-regular",
+    lineHeight: "3rem",
     fontSize: 16,
   },
 };
@@ -44,6 +57,7 @@ const colors = {
   secondary: "#ffffff",
   black: "#252b33",
   gray: "#E8E9E9",
+  gray100: "#6C757D",
 };
 const light = {
   key: "light",

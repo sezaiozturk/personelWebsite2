@@ -34,19 +34,27 @@ const AboutSection = () => {
       <div className={classes.contactContainer}>
         <div className={classes.contact}>
           <div>
-            <Text variant="title5">Name:</Text>
+            <Text variant="title5" color="gray100">
+              Name:
+            </Text>
             <Text variant="text2"> Sezai Öztürk</Text>
           </div>
           <div>
-            <Text variant="title5">Name:</Text>
+            <Text variant="title5" color="gray100">
+              Name:
+            </Text>
             <Text variant="text2"> Sezai Öztürk</Text>
           </div>
           <div>
-            <Text variant="title5">Name:</Text>
+            <Text variant="title5" color="gray100">
+              Name:
+            </Text>
             <Text variant="text2"> Sezai Öztürk</Text>
           </div>
           <div>
-            <Text variant="title5">Name:</Text>
+            <Text variant="title5" color="gray100">
+              Name:
+            </Text>
             <Text variant="text2"> Sezai Öztürk</Text>
           </div>
         </div>

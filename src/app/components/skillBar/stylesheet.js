@@ -5,7 +5,7 @@ const useStyle = createUseStyles(
     container: {
       flexDirection: "column",
       display: "flex",
-      width: "48%",
+      width: "100%",
     },
     header: {
       justifyContent: "space-between",

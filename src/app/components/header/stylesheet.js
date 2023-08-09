@@ -46,7 +46,7 @@ const useStyle = createUseStyles(
     },
   },
   {
-    name: "Header-Component",
+    name: "Component-Header",
   }
 );
 export default useStyle;

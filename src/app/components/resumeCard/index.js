@@ -8,8 +8,10 @@ const ResumeCard = ({ title, subTitle, message }) => {
     <div className={classes.container}>
       <div>
         <Text variant={"title4"}>{title}</Text>
-        <Text variant={"title5"}>{subTitle}</Text>
-        <Text variant={"text3"}>{message}</Text>
+        <Text variant={"title6"}>{subTitle}</Text>
+        <Text variant={"text3"} color="gray100">
+          {message}
+        </Text>
       </div>
       <div className={classes.seperator} />
     </div>
