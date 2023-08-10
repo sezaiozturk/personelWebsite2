@@ -3,14 +3,14 @@ import { createUseStyles } from "react-jss";
 const useStyle = createUseStyles(
   {
     container: {
+      justifyContent: "center",
       flexDirection: "column",
       padding: "5rem 10rem",
+      alignItems: "center",
+      minHeight: "100vh",
       display: "flex",
       height: "100%",
       gap: "5rem",
-      minHeight: "100vh",
-      justifyContent: "center",
-      alignItems: "center",
     },
     title: {
       justifyContent: "center",

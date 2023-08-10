@@ -77,7 +77,7 @@ const ResumeSection = () => {
         title="Download Cv"
         spreadBehaviour="free"
         variant="outlined"
-        style={{ margin: "5rem 0" }}
+        style={{ margin: "5rem 0 10rem 0" }}
       />
     </div>
   );

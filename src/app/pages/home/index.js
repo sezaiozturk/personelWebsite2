@@ -3,6 +3,8 @@ import {
   AboutSection,
   ResumeSection,
   HireSection,
+  PortfolioSection,
+  ContactSection,
 } from "./views";
 const Home = () => {
   return (
@@ -11,7 +13,8 @@ const Home = () => {
       <AboutSection />
       <ResumeSection />
       <HireSection />
-      <div style={{ height: 1000 }} />
+      <PortfolioSection />
+      <ContactSection />
     </div>
   );
 };

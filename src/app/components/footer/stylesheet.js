@@ -1,5 +1,4 @@
 import { createUseStyles } from "react-jss";
-import { clickEvent } from "../../themes/helpers";
 
 const useStyle = createUseStyles(
   {
