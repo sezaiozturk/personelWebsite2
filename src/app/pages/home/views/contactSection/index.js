@@ -7,7 +7,7 @@ const ContactSection = () => {
   const classes = useStyle({ color: colors });
 
   return (
-    <div className={classes.container}>
+    <div id="contact" className={classes.container}>
       <div className={classes.content}>
         <div className={classes.cell}>
           <Text variant="title1">Let's get in touch</Text>
@@ -29,9 +29,18 @@ const ContactSection = () => {
             </div>
           </div>
           <div className={classes.social}>
-            <i class="fa-brands fa-github fa-3x"></i>
-            <i class="fa-brands fa-linkedin-in fa-3x"></i>
-            <i class="fa-brands fa-instagram fa-3x"></i>
+            <div className={classes.tooltip}>
+              <i className="fa-brands fa-github fa-3x"></i>
+              <span className={classes.tooltiptext}>Github</span>
+            </div>
+            <div className={classes.tooltip}>
+              <i className="fa-brands fa-linkedin-in fa-3x"></i>
+              <span className={classes.tooltiptext}>Linkedin</span>
+            </div>
+            <div className={classes.tooltip}>
+              <i className="fa-brands fa-instagram fa-3x"></i>
+              <span className={classes.tooltiptext}>Instagram</span>
+            </div>
           </div>
         </div>
         <div className={classes.cell}>

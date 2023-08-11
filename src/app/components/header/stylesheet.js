@@ -5,7 +5,9 @@ const useStyle = createUseStyles(
   {
     container: {
       backgroundColor: ({ color }) => color.secondary,
+      borderBottomColor: ({ color }) => color.gray200,
       justifyContent: "space-between",
+      borderBottom: "1px solid",
       alignItems: "center",
       padding: "1rem 6rem",
       position: "fixed",
@@ -33,14 +35,32 @@ const useStyle = createUseStyles(
       },
     },
     themeContainer: {
+      justifyContent: "center",
+      alignItems: "center",
       display: "flex",
-      gap: "4rem",
-      "& button": {
+      gap: "2rem",
+      "& > div": {
         backgroundColor: "transparent",
         border: "none",
+        padding: "0.5rem",
         ...clickEvent(),
       },
       "& ul": {
+        display: "flex",
+      },
+    },
+    hamburger: {
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      display: "none",
+      gap: 3,
+      "& div": {
+        backgroundColor: ({ color }) => color.black,
+        width: 20,
+        height: 3,
+      },
+      "@media screen and (max-width:768px)": {
         display: "flex",
       },
     },

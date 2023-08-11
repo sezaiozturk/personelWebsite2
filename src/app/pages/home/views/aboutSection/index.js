@@ -7,7 +7,7 @@ const AboutSection = () => {
   const classes = useStyle({ color: colors });
 
   return (
-    <div className={classes.container}>
+    <div id="about" className={classes.container}>
       <div className={classes.title}>
         <Title title={"About Me"} />
         <Text variant="title1">Know Me More</Text>

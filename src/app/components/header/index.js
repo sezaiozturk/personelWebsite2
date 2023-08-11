@@ -1,33 +1,51 @@
 import { useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import useStyle from "./stylesheet";
 import Menu from "../menu";
-import { AiOutlineGlobal } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import mobileMenuController from "../mobileMenu/events";
+
 const Header = ({ menuData }) => {
   const { activeLocale, switchLocale } = useNCoreLocalization();
   const { colors, activeTheme, switchTheme } = useNCoreTheme();
   const classes = useStyle({ color: colors });
+  const navigate = useNavigate();
   return (
     <div className={classes.container}>
       <div className={classes.contentContainer}>
-        <div className={classes.logoContainer}>
+        <div
+          className={classes.logoContainer}
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           <span>SEZAİ</span>
         </div>
         <Menu data={menuData} />
         <div className={classes.themeContainer}>
-          <button
+          <div
+            className={classes.hamburger}
+            onClick={() => {
+              mobileMenuController.emit("setIsActive");
+            }}
+          >
+            <div />
+            <div />
+            <div />
+          </div>
+          <div
             onClick={() => {
               switchLocale(activeLocale === "en" ? "tr" : "en");
             }}
           >
-            <i class="fa-solid fa-globe fa-2x"></i>
-          </button>
-          <button
+            <i className="fa-solid fa-globe fa-2xl"></i>
+          </div>
+          <div
             onClick={() => {
               switchTheme(activeTheme === "light" ? "dark" : "light");
             }}
           >
-            <i class="fa-solid fa-moon fa-2x"></i>
-          </button>
+            <i className="fa-solid fa-moon fa-2xl"></i>
+          </div>
         </div>
       </div>
     </div>

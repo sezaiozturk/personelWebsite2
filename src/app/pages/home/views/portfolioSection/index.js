@@ -1,4 +1,4 @@
-import { Button, Text, useNCoreTheme } from "ncore-web";
+import { Text, useNCoreTheme } from "ncore-web";
 import { ProjeCard, Title } from "../../../../components";
 import useStyle from "./stylesheet";
 
@@ -7,7 +7,7 @@ const PortfolioSection = () => {
   const classes = useStyle({ color: colors });
 
   return (
-    <div className={classes.container}>
+    <div id="portfolio" className={classes.container}>
       <div className={classes.title}>
         <Title title={"Portfolio"} />
         <Text variant="title1">Some of my most recent projects</Text>

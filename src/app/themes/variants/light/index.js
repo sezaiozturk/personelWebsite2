@@ -66,6 +66,7 @@ const colors = {
   black: "#252b33",
   gray: "#E8E9E9",
   gray100: "#6C757D",
+  gray200: "#EFEFEF",
 };
 const light = {
   key: "light",

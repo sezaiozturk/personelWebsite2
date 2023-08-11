@@ -10,7 +10,7 @@ const ProjeCard = ({ imgUrl }) => {
         <img src={imgUrl} className={classes.image} />
         <div className={classes.filter}>
           <i
-            class="fa-solid fa-mobile-screen-button fa-4x"
+            className="fa-solid fa-mobile-screen-button fa-4x"
             style={{ color: colors.primary, marginBottom: "2rem" }}
           ></i>
           <Text variant={"title4"} color="secondary">

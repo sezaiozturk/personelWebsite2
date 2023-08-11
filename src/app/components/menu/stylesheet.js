@@ -9,9 +9,11 @@ const useStyle = createUseStyles(
         color: ({ color }) => color.black,
         fontFamily: "poppins-semibold",
         textTransform: "uppercase",
+        textDecoration: "none",
         flexDirection: "column",
         position: "relative",
         fontSize: "1.6rem",
+        padding: "1rem",
         display: "flex",
       },
       "& a::after": {
@@ -22,7 +24,7 @@ const useStyle = createUseStyles(
         visibility: "hidden",
         content: "''",
         left: "50%",
-        bottom: -5,
+        bottom: 2,
         width: 0,
       },
       "& a:hover": {
@@ -31,9 +33,9 @@ const useStyle = createUseStyles(
       "& a:hover::after": {
         transition: "width 0.4s ease",
         visibility: "visible",
-        width: "100%",
+        width: "80%",
       },
-      "@media screen and (max-width:1200px)": {
+      "@media screen and (max-width:768px)": {
         display: "none",
       },
     },

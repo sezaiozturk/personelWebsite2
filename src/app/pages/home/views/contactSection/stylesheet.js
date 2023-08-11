@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import { clickEvent } from "../../../../themes/helpers";
+import { clickEvent, tooltip, tooltipText } from "../../../../themes/helpers";
 
 const useStyle = createUseStyles(
   {
@@ -61,6 +61,12 @@ const useStyle = createUseStyles(
       alignItems: "flex-start",
       display: "flex",
       gap: "3rem",
+    },
+    tooltip: {
+      ...tooltip(),
+    },
+    tooltiptext: {
+      ...tooltipText(),
     },
     "@media screen and (max-width:1030px)": {
       container: {

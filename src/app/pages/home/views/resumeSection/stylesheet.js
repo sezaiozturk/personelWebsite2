@@ -5,7 +5,7 @@ const useStyle = createUseStyles(
     container: {
       justifyContent: "center",
       flexDirection: "column",
-      padding: "5rem 6%",
+      padding: "10rem 6%",
       alignItems: "center",
       minHeight: "100vh",
       display: "flex",

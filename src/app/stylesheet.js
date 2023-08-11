@@ -33,13 +33,17 @@ const useStyle = createUseStyles(
           src: "url('/assets/fonts/Poppins-SemiBold.ttf')",
         },
       ],
+      "*": {
+        textDecoration: "none",
+        boxSizing: "border-box",
+      },
       html: {
         fontSize: "62.5%",
         userSelect: "none",
+        scrollBehavior: "smooth",
       },
       body: {
         backgroundColor: "black",
-        boxSizing: "border-box",
         minWidth: 375,
       },
     },

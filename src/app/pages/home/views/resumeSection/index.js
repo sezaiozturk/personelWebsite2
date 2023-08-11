@@ -7,7 +7,7 @@ const ResumeSection = () => {
   const classes = useStyle({ color: colors });
 
   return (
-    <div className={classes.container}>
+    <div id="resume" className={classes.container}>
       <div className={classes.title}>
         <Title title={"Resume"} />
         <Text variant="title1">A summary of My Resume</Text>
