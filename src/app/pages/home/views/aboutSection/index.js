@@ -1,13 +1,21 @@
 import { Text, useNCoreTheme } from "ncore-web";
 import { Title } from "../../../../components";
 import useStyle from "./stylesheet";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const AboutSection = () => {
   const { colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
+  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
+    threshold: 0.8,
+  });
+  useEffect(() => {
+    sectionIsVisible && window.location.replace("#about");
+  }, [sectionIsVisible]);
 
   return (
-    <div id="about" className={classes.container}>
+    <div id="about" className={classes.container} ref={sectionRef}>
       <div className={classes.title}>
         <Title title={"About Me"} />
         <Text variant="title1">Know Me More</Text>

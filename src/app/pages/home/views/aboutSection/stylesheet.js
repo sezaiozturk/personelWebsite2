@@ -95,7 +95,7 @@ const useStyle = createUseStyles(
     },
     "@media screen and (max-width:950px)": {
       container: {
-        padding: "12rem 3rem",
+        padding: "9rem 3rem",
       },
       content: {
         flexDirection: "column",

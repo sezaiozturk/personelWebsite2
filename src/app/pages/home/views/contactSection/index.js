@@ -1,13 +1,21 @@
 import { Button, Text, useNCoreTheme } from "ncore-web";
 import { MultiTextInput, TextInput, Title } from "../../../../components";
 import useStyle from "./stylesheet";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const ContactSection = () => {
   const { colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
+  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
+    threshold: 0.8,
+  });
+  useEffect(() => {
+    sectionIsVisible && window.location.replace("#contact");
+  }, [sectionIsVisible]);
 
   return (
-    <div id="contact" className={classes.container}>
+    <div id="contact" className={classes.container} ref={sectionRef}>
       <div className={classes.content}>
         <div className={classes.cell}>
           <Text variant="title1">Let's get in touch</Text>

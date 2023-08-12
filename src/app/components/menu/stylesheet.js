@@ -13,7 +13,7 @@ const useStyle = createUseStyles(
         flexDirection: "column",
         position: "relative",
         fontSize: "1.6rem",
-        padding: "1rem",
+        padding: "1rem 0.5rem",
         display: "flex",
       },
       "& a::after": {
@@ -33,7 +33,7 @@ const useStyle = createUseStyles(
       "& a:hover::after": {
         transition: "width 0.4s ease",
         visibility: "visible",
-        width: "80%",
+        width: "85%",
       },
       "@media screen and (max-width:768px)": {
         display: "none",

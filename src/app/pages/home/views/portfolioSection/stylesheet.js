@@ -10,7 +10,7 @@ const useStyle = createUseStyles(
       minHeight: "100vh",
       display: "flex",
       height: "100%",
-      gap: "5rem",
+      gap: "1rem",
     },
     title: {
       justifyContent: "center",
@@ -30,7 +30,7 @@ const useStyle = createUseStyles(
     },
     "@media screen and (max-width:1030px)": {
       container: {
-        padding: "5rem",
+        padding: "7rem 2rem",
       },
       content: {
         gap: 15,

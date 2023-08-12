@@ -40,7 +40,6 @@ const useStyle = createUseStyles(
       html: {
         fontSize: "62.5%",
         userSelect: "none",
-        scrollBehavior: "smooth",
       },
       body: {
         backgroundColor: "black",

@@ -20,6 +20,7 @@ const typography = {
   },
   title2: {
     fontSize: 32,
+    fontFamily: "poppins-regular",
   },
   title3: {
     fontFamily: "poppins-semibold",

@@ -12,12 +12,16 @@ const useStyle = createUseStyles(
       position: "fixed",
       padding: "1.5rem",
       display: "none",
-      width: "50rem",
+      boxShadow: "0 0 5px 0 rgba(0,0,0,0.5)",
+      width: "100%",
       zIndex: 10,
       left: "50%",
       top: 65,
       "&.isActive": {
         display: "flex",
+      },
+      "& div": {
+        width: "100%",
       },
       "& a": {
         color: ({ color }) => color.black,
@@ -35,12 +39,6 @@ const useStyle = createUseStyles(
       "& a:hover": {
         cursor: "pointer",
         color: ({ color }) => color.primary,
-      },
-      "@media screen and (max-width:570px)": {
-        width: "40rem",
-      },
-      "@media screen and (max-width:475px)": {
-        width: "100%",
       },
     },
     seperator: {

@@ -76,8 +76,9 @@ const useStyle = createUseStyles(
       overflow: "hidden",
       color: "white",
       "& span": {
-        fontSize: 120,
+        fontSize: 114,
         color: "white",
+        fontFamily: "poppins-semibold",
         "@media screen and (max-width:950px)": {
           fontSize: 90,
         },

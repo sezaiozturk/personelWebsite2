@@ -3,12 +3,14 @@ import useStyle from "./stylesheet";
 import Menu from "../menu";
 import { useNavigate } from "react-router-dom";
 import mobileMenuController from "../mobileMenu/events";
+import MobileMenu from "../mobileMenu";
 
 const Header = ({ menuData }) => {
   const { activeLocale, switchLocale } = useNCoreLocalization();
   const { colors, activeTheme, switchTheme } = useNCoreTheme();
   const classes = useStyle({ color: colors });
   const navigate = useNavigate();
+
   return (
     <div className={classes.container}>
       <div className={classes.contentContainer}>
@@ -21,6 +23,7 @@ const Header = ({ menuData }) => {
           <span>SEZAİ</span>
         </div>
         <Menu data={menuData} />
+        <MobileMenu data={menuData} />
         <div className={classes.themeContainer}>
           <div
             className={classes.hamburger}

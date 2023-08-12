@@ -1,4 +1,4 @@
-import { useNCoreLocalization, useNCoreTheme } from "ncore-web";
+import { Button, useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import useStyle from "./stylesheet";
 import { useEffect, useRef } from "react";
 import mobileMenuController from "./events";
@@ -8,6 +8,7 @@ const MobileMenu = ({ data }) => {
   const { colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
   const menuRef = useRef(null);
+  const selectedSectionName = window.location.href.split("/")[3];
 
   useEffect(() => {
     mobileMenuController.addEventListener("setIsActive", onActiveChanged);
@@ -27,18 +28,25 @@ const MobileMenu = ({ data }) => {
     <div className={classes.container} ref={menuRef}>
       {data.map((item, index) => {
         return (
-          <>
+          <div key={`div-${index}`}>
             <a
               key={index}
               href={`#${item.key}`}
+              style={
+                selectedSectionName === item.path
+                  ? { color: colors.primary }
+                  : null
+              }
               onClick={() => {
                 mobileMenuController.emit("setIsActive");
               }}
             >
               {localize(item.key)}
             </a>
-            {index < 4 ? <div className={classes.seperator} /> : null}
-          </>
+            {index < 4 ? (
+              <div className={classes.seperator} key={`s-${index}`} />
+            ) : null}
+          </div>
         );
       })}
     </div>

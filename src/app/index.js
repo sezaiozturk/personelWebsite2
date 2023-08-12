@@ -9,7 +9,7 @@ import locales from "./locales";
 import themes from "./themes/";
 import useStyle from "./stylesheet";
 import Navigation from "./navigations";
-import { Footer, Header, MobileMenu } from "./components";
+import { Footer, Header } from "./components";
 import { MENU } from "./constans";
 
 function App() {
@@ -19,7 +19,6 @@ function App() {
   return (
     <div className={classes.container}>
       <Header menuData={MENU} />
-      <MobileMenu data={MENU} />
       <Navigation />
       <Footer />
     </div>

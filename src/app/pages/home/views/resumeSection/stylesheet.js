@@ -62,7 +62,7 @@ const useStyle = createUseStyles(
     },
     "@media screen and (max-width:768px)": {
       container: {
-        padding: "5rem 4%",
+        padding: "7rem 4%",
       },
       skillsContent: {
         gap: "1rem",
