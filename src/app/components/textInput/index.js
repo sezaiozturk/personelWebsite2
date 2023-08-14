@@ -2,8 +2,8 @@ import { Text, useNCoreTheme } from "ncore-web";
 import useStyle from "./stylesheet";
 
 const TextInput = ({ title, id, type = "text", onChangeText }) => {
-  const { colors } = useNCoreTheme();
-  const classes = useStyle({ color: colors });
+  const { colors, activeTheme } = useNCoreTheme();
+  const classes = useStyle({ color: colors, theme: activeTheme });
   return (
     <div className={classes.container}>
       <label className={classes.label} htmlFor={id}>

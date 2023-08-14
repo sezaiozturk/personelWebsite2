@@ -1,24 +1,21 @@
 import { Button, Text, useNCoreTheme } from "ncore-web";
 import { MultiTextInput, TextInput, Title } from "../../../../components";
 import useStyle from "./stylesheet";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
-const ContactSection = () => {
-  const { colors } = useNCoreTheme();
-  const classes = useStyle({ color: colors });
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
-    threshold: 0.8,
-  });
-  useEffect(() => {
-    sectionIsVisible && window.location.replace("#contact");
-  }, [sectionIsVisible]);
+const ContactSection = ({ sectionRef }) => {
+  const { colors, activeTheme } = useNCoreTheme();
+  const classes = useStyle({ color: colors, theme: activeTheme });
 
   return (
     <div id="contact" className={classes.container} ref={sectionRef}>
       <div className={classes.content}>
         <div className={classes.cell}>
-          <Text variant="title1">Let's get in touch</Text>
+          <Text
+            variant="title1"
+            color={activeTheme === "light" ? "black" : "primary"}
+          >
+            Let's get in touch
+          </Text>
           <div className={classes.statement}>
             <Text variant="text1">
               I enjoy discussing new projects and design challenges. Please
@@ -52,7 +49,12 @@ const ContactSection = () => {
           </div>
         </div>
         <div className={classes.cell}>
-          <Text variant="title1">Estimate your Project?</Text>
+          <Text
+            variant="title1"
+            color={activeTheme === "light" ? "black" : "primary"}
+          >
+            Estimate your Project?
+          </Text>
           <div className={classes.form}>
             <TextInput
               title="What is Your Name:"
@@ -68,7 +70,11 @@ const ContactSection = () => {
               title="How can I Help you?:"
               onChangeText={(text) => console.log(text)}
             />
-            <Button title="Send" spreadBehaviour="free" color="black" />
+            <Button
+              title="Send"
+              spreadBehaviour="free"
+              color={activeTheme === "light" ? "black" : "primary"}
+            />
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ const useStyle = createUseStyles(
       flex: 1,
     },
     hideContainer: {
-      backgroundColor: "white",
+      backgroundColor: ({ color }) => color.secondary,
       position: "absolute",
       height: "2.5rem",
       width: "100%",

@@ -3,7 +3,8 @@ import { createUseStyles } from "react-jss";
 const useStyle = createUseStyles(
   {
     container: {
-      backgroundColor: ({ color }) => color.primary,
+      backgroundColor: ({ color, theme }) =>
+        theme === "light" ? color.primary : "transparent",
       padding: "2px 4px",
     },
   },

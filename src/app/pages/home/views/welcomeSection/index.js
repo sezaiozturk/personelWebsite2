@@ -1,25 +1,18 @@
 import React, { useEffect } from "react";
 import useStyle from "./stylesheet";
 import { Button, useNCoreLocalization, useNCoreTheme, Text } from "ncore-web";
-import { useInView } from "react-intersection-observer";
 
-const WelcomeSection = () => {
+const WelcomeSection = ({ sectionRef }) => {
   const { activeTheme, colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
   const { localize } = useNCoreLocalization();
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
-    threshold: 0.5,
-  });
-  useEffect(() => {
-    sectionIsVisible && window.location.replace("#");
-  }, [sectionIsVisible]);
 
   return (
     <div id="home" className={classes.container} ref={sectionRef}>
       <div className={classes.background}>
         <div className={classes.filter}>
           <div className={classes.contentContainer}>
-            <Text variant="title2" color="secondary">
+            <Text variant="title2" color="text">
               {localize("hello")}
             </Text>
             <div className={classes.typeWriter}>
@@ -30,7 +23,7 @@ const WelcomeSection = () => {
                 title={localize("works")}
                 spreadBehaviour="free"
                 size="medium"
-                textColor="black"
+                textColor="button"
               />
             </a>
           </div>

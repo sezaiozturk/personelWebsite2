@@ -6,7 +6,7 @@ const Footer = () => {
   const classes = useStyle({ color: colors });
   return (
     <div className={classes.container}>
-      <Text variant="title5" color="secondary">
+      <Text variant="title5" color="text">
         Copyright © 2023{" "}
         <Text
           variant="title5"
@@ -17,7 +17,7 @@ const Footer = () => {
         </Text>
         . All Rights Reserved.
       </Text>
-      <Text variant="title5" color="secondary">
+      <Text variant="title5" color="text">
         Designed by{" "}
         <Text
           variant="title5"

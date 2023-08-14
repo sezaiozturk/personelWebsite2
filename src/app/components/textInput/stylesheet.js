@@ -9,12 +9,15 @@ const useStyle = createUseStyles(
       gap: "0.8rem",
     },
     label: {
+      color: ({ color }) => color.black,
       fontFamily: "poppins-regular",
       fontSize: 16,
     },
     input: {
-      backgroundColor: ({ color }) => color.primary,
+      backgroundColor: ({ color, theme }) =>
+        theme === "light" ? color.primary : "#1f1f1f",
       borderBottom: "2px solid rgba(0,0,0,0.3)",
+      color: ({ color }) => color.black,
       fontFamily: "poppins-medium",
       outline: "none",
       border: "none",

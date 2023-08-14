@@ -63,8 +63,10 @@ const typography = {
 };
 const colors = {
   primary: "#f5df4e",
-  secondary: "#ffffff",
+  secondary: "#f5f5f5",
   black: "#252b33",
+  text: "#f5f5f5",
+  button: "#252b33",
   gray: "#E8E9E9",
   gray100: "#6C757D",
   gray200: "#EFEFEF",

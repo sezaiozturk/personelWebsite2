@@ -1,18 +1,10 @@
 import { Text, useNCoreTheme } from "ncore-web";
 import { ProjeCard, Title } from "../../../../components";
 import useStyle from "./stylesheet";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
-const PortfolioSection = () => {
+const PortfolioSection = ({ sectionRef }) => {
   const { colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
-    threshold: 0.5,
-  });
-  useEffect(() => {
-    sectionIsVisible && window.location.replace("#portfolio");
-  }, [sectionIsVisible]);
 
   return (
     <div id="portfolio" className={classes.container} ref={sectionRef}>

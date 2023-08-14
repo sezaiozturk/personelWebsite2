@@ -32,6 +32,7 @@ const useStyle = createUseStyles(
         fontFamily: "poppins-bold",
         fontSize: "3rem",
         letterSpacing: 1,
+        color: ({ color }) => color.black,
       },
     },
     themeContainer: {

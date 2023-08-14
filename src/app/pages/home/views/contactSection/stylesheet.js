@@ -4,7 +4,8 @@ import { clickEvent, tooltip, tooltipText } from "../../../../themes/helpers";
 const useStyle = createUseStyles(
   {
     container: {
-      backgroundColor: ({ color }) => color.primary,
+      backgroundColor: ({ color, theme }) =>
+        theme === "light" ? color.primary : color.secondary,
       justifyContent: "flex-start",
       flexDirection: "column",
       alignItems: "center",

@@ -1,19 +1,10 @@
 import { Button, Text, useNCoreTheme } from "ncore-web";
 import { ResumeCard, SkillBar, Title } from "../../../../components";
 import useStyle from "./stylesheet";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
-const ResumeSection = () => {
-  const { colors } = useNCoreTheme();
+const ResumeSection = ({ sectionRef }) => {
+  const { colors, activeTheme } = useNCoreTheme();
   const classes = useStyle({ color: colors });
-  const { ref: sectionRef, inView: sectionIsVisible } = useInView({
-    threshold: 0.4,
-  });
-
-  useEffect(() => {
-    sectionIsVisible && window.location.replace("#resume");
-  }, [sectionIsVisible]);
 
   return (
     <div id="resume" className={classes.container} ref={sectionRef}>
@@ -85,8 +76,8 @@ const ResumeSection = () => {
       <Button
         title="Download Cv"
         spreadBehaviour="free"
-        variant="outlined"
         style={{ margin: "5rem 0 10rem 0" }}
+        textColor="button"
       />
     </div>
   );

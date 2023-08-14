@@ -35,6 +35,7 @@ const useStyle = createUseStyles(
       position: "absolute",
       visibility: "hidden",
       textAlign: "center",
+      padding: "1rem",
       display: "flex",
       gap: "0.5rem",
       bottom: 0,

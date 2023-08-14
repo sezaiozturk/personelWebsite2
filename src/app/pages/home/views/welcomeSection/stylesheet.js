@@ -38,8 +38,9 @@ const useStyle = createUseStyles(
     filter: {
       backgroundColor: "rgba(0,0,0,0.6)",
       justifyContent: "center",
-      position: "relative",
+      flexDirection: "column",
       alignItems: "center",
+      position: "relative",
       display: "flex",
       height: "100%",
       width: "100%",
@@ -47,17 +48,16 @@ const useStyle = createUseStyles(
     contentContainer: {
       justifyContent: "center",
       flexDirection: "column",
-      position: "absolute",
       alignItems: "center",
       textAlign: "center",
+      marginBottom: "5%",
       display: "flex",
       padding: "2rem",
-      marginBottom: "5%",
       gap: "2.5rem",
       "& span": {
-        fontSize: 40,
-        color: "white",
         letterSpacing: "0.5rem",
+        color: "white",
+        fontSize: 40,
         "@media screen and (max-width:950px)": {
           fontSize: 25,
         },
@@ -69,7 +69,7 @@ const useStyle = createUseStyles(
     typeWriter: {
       animation:
         "typing 4s steps(40, end) infinite,blink-caret .75s step-end infinite",
-      borderRight: ".3em solid orange",
+      borderRight: ".9em solid",
       letterSpacing: ".15em",
       whiteSpace: "nowrap",
       margin: "0 auto",
@@ -88,13 +88,13 @@ const useStyle = createUseStyles(
       },
     },
     scrool: {
-      border: "none",
-      backgroundColor: "transparent",
-      color: "white",
       animation: "scroolAnim 1.2s ease infinite",
+      backgroundColor: "transparent",
+      transform: "translate(-50%)",
       position: "absolute",
+      border: "none",
+      color: "white",
       bottom: "5rem",
-      padding: "1rem",
       "&:hover": {
         cursor: "pointer",
       },

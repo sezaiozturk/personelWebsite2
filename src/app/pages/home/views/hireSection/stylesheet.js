@@ -4,13 +4,13 @@ const useStyle = createUseStyles(
   {
     container: {
       backgroundImage: "url(/assets/images/hire-background.jpg)",
+      backgroundAttachment: "fixed",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       justifyContent: "center",
       backgroundSize: "cover",
       alignItems: "center",
       display: "flex",
-      backgroundAttachment: "fixed",
     },
     filter: {
       backgroundColor: "rgba(0,0,0,0.75)",

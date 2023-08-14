@@ -40,14 +40,20 @@ const Header = ({ menuData }) => {
               switchLocale(activeLocale === "en" ? "tr" : "en");
             }}
           >
-            <i className="fa-solid fa-globe fa-2xl"></i>
+            <i
+              className="fa-solid fa-globe fa-2xl"
+              style={{ color: colors.black }}
+            ></i>
           </div>
           <div
             onClick={() => {
               switchTheme(activeTheme === "light" ? "dark" : "light");
             }}
           >
-            <i className="fa-solid fa-moon fa-2xl"></i>
+            <i
+              className="fa-solid fa-moon fa-2xl"
+              style={{ color: colors.black }}
+            ></i>
           </div>
         </div>
       </div>
