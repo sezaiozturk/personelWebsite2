@@ -1,20 +1,21 @@
-import { Text, useNCoreTheme } from "ncore-web";
+import { Text, useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import { Title } from "../../../../components";
 import useStyle from "./stylesheet";
 
 const AboutSection = ({ sectionRef }) => {
   const { colors } = useNCoreTheme();
+  const { localize } = useNCoreLocalization();
   const classes = useStyle({ color: colors });
 
   return (
     <div id="about" className={classes.container} ref={sectionRef}>
       <div className={classes.title}>
-        <Title title={"About Me"} />
-        <Text variant="title1">Know Me More</Text>
+        <Title title={localize("aboutMe")} />
+        <Text variant="title1">{localize("knowMeMore")}</Text>
       </div>
       <div className={classes.content}>
         <div className={classes.contentLeft}>
-          <Text variant="title2">Hi I'm Sezai Öztürk</Text>
+          <Text variant="title2">{localize("hi")} Sezai Öztürk</Text>
           <Text variant="text1">
             Hi, I'm Callum Smith I'm a designer & developer with a passion for
             web design. I enjoy developing simple, clean and slick websites that
@@ -35,27 +36,27 @@ const AboutSection = ({ sectionRef }) => {
         <div className={classes.contact}>
           <div>
             <Text variant="title5" color="gray100">
-              Name:
+              {localize("name")}:
             </Text>
             <Text variant="text2"> Sezai Öztürk</Text>
           </div>
           <div>
             <Text variant="title5" color="gray100">
-              Name:
+              {localize("email")}:
             </Text>
-            <Text variant="text2"> Sezai Öztürk</Text>
+            <Text variant="text2">ozturksezai52@gmail.com</Text>
           </div>
           <div>
             <Text variant="title5" color="gray100">
-              Name:
+              {localize("dateOfBirth")}:
             </Text>
-            <Text variant="text2"> Sezai Öztürk</Text>
+            <Text variant="text2">13 {localize("february")} ,1999</Text>
           </div>
           <div>
             <Text variant="title5" color="gray100">
-              Name:
+              {localize("from")}:
             </Text>
-            <Text variant="text2"> Sezai Öztürk</Text>
+            <Text variant="text2">Selçuklu, Konya</Text>
           </div>
         </div>
       </div>

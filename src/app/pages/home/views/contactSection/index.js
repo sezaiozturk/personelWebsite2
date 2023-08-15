@@ -1,9 +1,10 @@
-import { Button, Text, useNCoreTheme } from "ncore-web";
+import { Button, Text, useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import { MultiTextInput, TextInput, Title } from "../../../../components";
 import useStyle from "./stylesheet";
 
 const ContactSection = ({ sectionRef }) => {
   const { colors, activeTheme } = useNCoreTheme();
+  const { localize } = useNCoreLocalization();
   const classes = useStyle({ color: colors, theme: activeTheme });
 
   return (
@@ -14,36 +15,44 @@ const ContactSection = ({ sectionRef }) => {
             variant="title1"
             color={activeTheme === "light" ? "black" : "primary"}
           >
-            Let's get in touch
+            {localize("touch")}
           </Text>
           <div className={classes.statement}>
-            <Text variant="text1">
-              I enjoy discussing new projects and design challenges. Please
-              share as much info, as possible so we can get the most out of our
-              first catch-up.
-            </Text>
+            <Text variant="text1">{localize("contactMessage")}</Text>
           </div>
           <div className={classes.contactContainer}>
             <div>
-              <Text variant="title7">Living In:</Text>
-              <Text variant="text4">30 Shacham street, Los Angeles, USA.</Text>
+              <Text variant="title7">{localize("livingIn")}:</Text>
+              <Text variant="text4">Selçuklu, Konya</Text>
             </div>
             <div>
-              <Text variant="title7">Call:</Text>
-              <Text variant="text4">(+060) 444 434 444</Text>
+              <Text variant="title7">{localize("call")}:</Text>
+              <Text variant="text4">(+90) 536 850 54 90</Text>
             </div>
           </div>
           <div className={classes.social}>
             <div className={classes.tooltip}>
-              <i className="fa-brands fa-github fa-3x"></i>
+              <a href="https://github.com/sezaiozturk" target="_blank">
+                <i className="fa-brands fa-github fa-3x"></i>
+              </a>
               <span className={classes.tooltiptext}>Github</span>
             </div>
             <div className={classes.tooltip}>
-              <i className="fa-brands fa-linkedin-in fa-3x"></i>
+              <a
+                href="https://www.linkedin.com/in/sezai-%C3%B6zt%C3%BCrk-29203526a/"
+                target="_blank"
+              >
+                <i className="fa-brands fa-linkedin-in fa-3x"></i>
+              </a>
               <span className={classes.tooltiptext}>Linkedin</span>
             </div>
             <div className={classes.tooltip}>
-              <i className="fa-brands fa-instagram fa-3x"></i>
+              <a
+                href="https://www.instagram.com/sezai.ozturk.509"
+                target="_blank"
+              >
+                <i className="fa-brands fa-instagram fa-3x"></i>
+              </a>
               <span className={classes.tooltiptext}>Instagram</span>
             </div>
           </div>
@@ -53,25 +62,25 @@ const ContactSection = ({ sectionRef }) => {
             variant="title1"
             color={activeTheme === "light" ? "black" : "primary"}
           >
-            Estimate your Project?
+            {localize("estimateYourProject")}
           </Text>
           <div className={classes.form}>
             <TextInput
-              title="What is Your Name:"
+              title={`${localize("whatIsYourName")}:`}
               id="name"
               onChangeText={(text) => console.log(text)}
             />
             <TextInput
-              title="Your Email Address:"
+              title={`${localize("yourEmailAddress")}:`}
               id="email"
               onChangeText={(text) => console.log(text)}
             />
             <MultiTextInput
-              title="How can I Help you?:"
+              title={`${localize("howCanIHelpYou")}:`}
               onChangeText={(text) => console.log(text)}
             />
             <Button
-              title="Send"
+              title={localize("send")}
               spreadBehaviour="free"
               color={activeTheme === "light" ? "black" : "primary"}
             />

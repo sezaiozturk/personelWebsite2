@@ -3,18 +3,15 @@ import { clickEvent } from "../../themes/helpers";
 
 const useStyle = createUseStyles(
   {
-    "@global": {
-      "*": {
-        transition: "all 0s !important",
-      },
-    },
     container: {
       position: "relative",
+      borderRadius: 10,
       display: "flex",
       height: 350,
       width: 350,
-      "&:hover": {
-        ...clickEvent(),
+      "&:active": {
+        transform: "translateY(2px)",
+        transition: "transform 0.1s",
       },
       "&:hover > div > div ": {
         visibility: "visible",
@@ -28,13 +25,14 @@ const useStyle = createUseStyles(
       width: "100%",
     },
     filter: {
-      backgroundColor: "rgba(0,0,0,0.5)",
+      backgroundColor: "rgba(0,0,0,0.9)",
       justifyContent: "center",
       flexDirection: "column",
       alignItems: "center",
       position: "absolute",
       visibility: "hidden",
       textAlign: "center",
+      borderRadius: 10,
       padding: "1rem",
       display: "flex",
       gap: "0.5rem",
@@ -44,6 +42,7 @@ const useStyle = createUseStyles(
       top: 0,
     },
     image: {
+      borderRadius: 10,
       height: "100%",
       width: "100%",
     },

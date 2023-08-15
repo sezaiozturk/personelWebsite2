@@ -1,23 +1,24 @@
-import { Text, useNCoreTheme } from "ncore-web";
+import { Text, useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import useStyle from "./stylesheet";
 
-const ProjeCard = ({ imgUrl }) => {
+const ProjeCard = ({ imgUrl, icon, title, description }) => {
   const { colors } = useNCoreTheme();
+  const { localize } = useNCoreLocalization();
   const classes = useStyle({ color: colors });
   return (
     <div className={classes.container}>
       <div className={classes.content}>
-        <img src={imgUrl} className={classes.image} />;
+        <img src={imgUrl} className={classes.image} />
         <div className={classes.filter}>
           <i
-            className="fa-solid fa-mobile-screen-button fa-4x"
+            className={icon}
             style={{ color: colors.primary, marginBottom: "2rem" }}
           ></i>
           <Text variant={"title4"} color="text">
-            Software Development Community
+            {localize(title)}
           </Text>
           <Text variant={"text3"} color="gray">
-            Kotlin Project
+            {localize(description)}
           </Text>
         </div>
       </div>

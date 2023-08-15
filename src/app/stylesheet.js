@@ -36,6 +36,7 @@ const useStyle = createUseStyles(
       "*": {
         textDecoration: "none",
         boxSizing: "border-box",
+        transition: "all 0s !important",
       },
       html: {
         fontSize: "62.5%",

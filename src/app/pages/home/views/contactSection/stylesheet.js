@@ -47,15 +47,6 @@ const useStyle = createUseStyles(
         color: ({ color }) => color.black,
         ...clickEvent(),
       },
-      "& i:nth-child(1):hover": {
-        color: "#24292E",
-      },
-      "& i:nth-child(2):hover": {
-        color: "#0B65C2",
-      },
-      "& i:nth-child(3):hover": {
-        color: "#F7075A",
-      },
     },
     form: {
       flexDirection: "column",

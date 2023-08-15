@@ -1,13 +1,13 @@
 import { useNCoreLocalization, useNCoreTheme, Text } from "ncore-web";
 import useStyle from "./stylesheet";
 const Footer = () => {
-  const { activeLocale, switchLocale } = useNCoreLocalization();
+  const { localize } = useNCoreLocalization();
   const { colors, activeTheme, switchTheme } = useNCoreTheme();
   const classes = useStyle({ color: colors });
   return (
     <div className={classes.container}>
       <Text variant="title5" color="text">
-        Copyright © 2023{" "}
+        {`${localize("copyright")} © 2023 `}
         <Text
           variant="title5"
           color="primary"
@@ -15,10 +15,10 @@ const Footer = () => {
         >
           Sezai
         </Text>
-        . All Rights Reserved.
+        {`.${localize("reserve")}.`}
       </Text>
       <Text variant="title5" color="text">
-        Designed by{" "}
+        {localize("designedBy") + " "}
         <Text
           variant="title5"
           color="primary"

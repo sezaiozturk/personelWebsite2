@@ -22,7 +22,7 @@ const useStyle = createUseStyles(
     },
     content: {
       justifyContent: "center",
-      alignItems: "center",
+      alignItems: "flex-start",
       display: "flex",
       width: "100%",
     },
