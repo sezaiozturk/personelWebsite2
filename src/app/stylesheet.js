@@ -37,6 +37,7 @@ const useStyle = createUseStyles(
         textDecoration: "none",
         boxSizing: "border-box",
         transition: "all 0s !important",
+        scrollBehavior: "smooth",
       },
       html: {
         fontSize: "62.5%",

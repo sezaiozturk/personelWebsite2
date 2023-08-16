@@ -12,10 +12,9 @@ const TextInput = ({ title, id, type = "text", onChangeText }) => {
       <input
         className={classes.input}
         id={id}
+        name={id}
         type={type}
-        onChange={(event) => {
-          if (onChangeText) onChangeText(event.target.value);
-        }}
+        onChange={onChangeText}
       />
     </div>
   );

@@ -15,21 +15,19 @@ const AboutSection = ({ sectionRef }) => {
       </div>
       <div className={classes.content}>
         <div className={classes.contentLeft}>
-          <Text variant="title2">{localize("hi")} Sezai Öztürk</Text>
-          <Text variant="text1">
-            Hi, I'm Callum Smith I'm a designer & developer with a passion for
-            web design. I enjoy developing simple, clean and slick websites that
-            provide real value to the end user. Thousands of clients have
-            procured exceptional results while working with me. Delivering work
-            within time and budget which meets client’s requirements is our
-            moto.
+          <Text variant="title2">
+            {localize("hi")}{" "}
+            <Text variant="title8" className={classes.name}>
+              Sezai Öztürk
+            </Text>
           </Text>
+          <Text variant="text1">{localize("whoAmI")}</Text>
         </div>
         <div className={classes.contentRight}>
-          <div>
-            <span>22</span>
-          </div>
-          <span>Years of Experianse</span>
+          <img
+            src="./assets/images/myPhoto.jpeg"
+            className={classes.profilePhoto}
+          />
         </div>
       </div>
       <div className={classes.contactContainer}>

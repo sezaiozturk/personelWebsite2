@@ -27,7 +27,7 @@ const useStyle = createUseStyles(
       height: "100vh",
     },
     background: {
-      backgroundImage: "url(/assets/images/welcome-background.jpg)",
+      backgroundImage: "url(/assets/images/welcome-background-min.jpg)",
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",

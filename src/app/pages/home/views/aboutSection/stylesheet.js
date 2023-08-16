@@ -29,35 +29,32 @@ const useStyle = createUseStyles(
       gap: "1.5rem",
       flex: 3,
     },
+    name: {
+      position: "relative",
+      "&::after": {
+        borderColor: ({ color }) => color.primary,
+        transform: "translate(-50%)",
+        border: "1.5px solid",
+        position: "absolute",
+        content: "''",
+        left: "50%",
+        bottom: 2,
+        width: "100%",
+      },
+    },
     contentRight: {
       flex: 1,
       justifyContent: "center",
-      flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
-      textAlign: "center",
-      padding: "0 6rem",
+      paddingLeft: "6rem",
       display: "flex",
-      gap: "2rem",
-      "& div": {
-        backgroundColor: ({ color }) => color.primary,
-        borderRadius: "50%",
-        height: "125px",
-        width: "125px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      },
-      "& span:nth-child(1)": {
-        fontSize: "15rem",
-        display: "block",
-        width: "30rem",
-        zIndex: 1,
-      },
-      "& span:nth-child(2)": {
-        fontSize: "3rem",
-        display: "block",
-      },
+    },
+    profilePhoto: {
+      width: 350,
+      height: 350,
+      borderRadius: 20,
+      backgroundOrigin: "center",
+      backgroundSize: "center",
     },
     contactContainer: {
       display: "flex",
@@ -75,19 +72,7 @@ const useStyle = createUseStyles(
     },
     "@media screen and (max-width:1285px)": {
       contentRight: {
-        padding: "0 4rem",
-        gap: "2rem",
-        "& div": {
-          height: "100px",
-          width: "100px",
-        },
-        "& span:nth-child(1)": {
-          fontSize: "14rem",
-          width: "20rem",
-        },
-        "& span:nth-child(2)": {
-          fontSize: "2.5rem",
-        },
+        paddingLeft: "3rem",
       },
       contact: {
         width: "100%",
@@ -98,27 +83,32 @@ const useStyle = createUseStyles(
         padding: "9rem 3rem",
       },
       content: {
-        flexDirection: "column",
+        flexDirection: "column-reverse",
         gap: "5rem",
       },
+      contentLeft: {
+        textAlign: "center",
+      },
       contentRight: {
-        "& div": {
-          height: "100px",
-          width: "100px",
-        },
-        "& span:nth-child(1)": {
-          fontSize: "12rem",
-          width: "20rem",
-        },
-        "& span:nth-child(2)": {
-          fontSize: "2.2rem",
-        },
+        paddingLeft: 0,
       },
       contact: {
         flexWrap: "wrap",
         "& div": {
           width: "50%",
           margin: "2rem 0",
+        },
+      },
+    },
+    "@media screen and (max-width:550px)": {
+      profilePhoto: {
+        width: 300,
+        height: 300,
+      },
+      contact: {
+        flexWrap: "wrap",
+        "& div": {
+          width: "100%",
         },
       },
     },

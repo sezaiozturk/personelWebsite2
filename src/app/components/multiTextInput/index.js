@@ -1,7 +1,7 @@
 import { Text, useNCoreTheme } from "ncore-web";
 import useStyle from "./stylesheet";
 
-const MultiTextInput = ({ title, id, onChangeText, value }) => {
+const MultiTextInput = ({ title, id, onChangeText }) => {
   const { colors, activeTheme } = useNCoreTheme();
   const classes = useStyle({ color: colors, theme: activeTheme });
   return (
@@ -12,12 +12,9 @@ const MultiTextInput = ({ title, id, onChangeText, value }) => {
       <textarea
         className={classes.input}
         id={id}
-        onChange={(event) => {
-          if (onChangeText) onChangeText(event.target.value);
-        }}
-      >
-        {value}
-      </textarea>
+        name={id}
+        onChange={onChangeText}
+      ></textarea>
     </div>
   );
 };

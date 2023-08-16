@@ -42,6 +42,10 @@ const typography = {
     fontFamily: "poppins-semibold",
     fontSize: 21,
   },
+  title8: {
+    fontSize: 32,
+    fontFamily: "poppins-semibold",
+  },
   text1: {
     fontFamily: "poppins-regular",
     lineHeight: "4rem",

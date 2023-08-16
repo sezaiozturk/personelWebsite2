@@ -1,11 +1,34 @@
 import { Button, Text, useNCoreLocalization, useNCoreTheme } from "ncore-web";
-import { MultiTextInput, TextInput, Title } from "../../../../components";
+import { MultiTextInput, TextInput } from "../../../../components";
 import useStyle from "./stylesheet";
+import { Formik, useFormik } from "formik";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = ({ sectionRef }) => {
   const { colors, activeTheme } = useNCoreTheme();
   const { localize } = useNCoreLocalization();
   const classes = useStyle({ color: colors, theme: activeTheme });
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_mc1s4za",
+        "template_yqdpmp9",
+        form.current,
+        "A-t2Cgdf1q5CHH1tk"
+      )
+      .then(
+        (result) => {
+          alert("Mesajınızı Aldım.En kısa zamanda dönüş sağlayacağım.");
+        },
+        (error) => {
+          alert("Beklenmedik hata!!!");
+        }
+      );
+  };
 
   return (
     <div id="contact" className={classes.container} ref={sectionRef}>
@@ -64,27 +87,33 @@ const ContactSection = ({ sectionRef }) => {
           >
             {localize("estimateYourProject")}
           </Text>
-          <div className={classes.form}>
-            <TextInput
-              title={`${localize("whatIsYourName")}:`}
-              id="name"
-              onChangeText={(text) => console.log(text)}
-            />
-            <TextInput
-              title={`${localize("yourEmailAddress")}:`}
-              id="email"
-              onChangeText={(text) => console.log(text)}
-            />
-            <MultiTextInput
-              title={`${localize("howCanIHelpYou")}:`}
-              onChangeText={(text) => console.log(text)}
-            />
-            <Button
-              title={localize("send")}
-              spreadBehaviour="free"
-              color={activeTheme === "light" ? "black" : "primary"}
-            />
-          </div>
+          <Formik initialValues={{ name: "", email: "", subject: "" }}>
+            {({ handleChange }) => (
+              <form className={classes.form} onSubmit={sendEmail} ref={form}>
+                <TextInput
+                  title={`${localize("whatIsYourName")}:`}
+                  id="name"
+                  onChangeText={handleChange}
+                />
+                <TextInput
+                  title={`${localize("yourEmailAddress")}:`}
+                  id="email"
+                  onChangeText={handleChange}
+                />
+                <MultiTextInput
+                  title={`${localize("howCanIHelpYou")}:`}
+                  onChangeText={handleChange}
+                  id={"subject"}
+                />
+                <Button
+                  title={localize("send")}
+                  spreadBehaviour="free"
+                  color={activeTheme === "light" ? "black" : "primary"}
+                  type="submit"
+                />
+              </form>
+            )}
+          </Formik>
         </div>
       </div>
     </div>

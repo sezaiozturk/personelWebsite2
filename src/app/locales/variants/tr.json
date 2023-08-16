@@ -4,7 +4,7 @@
   "translations": {
     "home": "Anasayfa",
     "about": "Hakkımda",
-    "resume": "Özgeçmiş",
+    "resume": "Öz Geçmiş",
     "portfolio": "Portföy",
     "contact": "İletişim",
     "hello": "MERHABA BEN",
@@ -12,7 +12,8 @@
     "works": "ÇALIŞMALARIM",
 
     "aboutMe": "Hakkımda",
-    "knowMeMore": "Know Me More",
+    "knowMeMore": "Ben Kimim?",
+    "whoAmI": "1999 İstanbul doğumluyum.Lisede ilk programlama giriş yaptım.",
     "hi": "Merhaba, Ben",
     "name": "İsim",
     "email": "E-posta",
@@ -20,7 +21,7 @@
     "from": "Yer",
     "february": "Şubat",
 
-    "summary": "A summary of My Resume",
+    "summary": "Kısa Bir Özet",
     "myEducation": "Eğitimlerim",
     "myExperience": "Deneyimlerim",
     "engineer": "Bilgisayar Mühendisliği - Lisans",
@@ -50,7 +51,7 @@
     "contactMessage": "loremmm",
     "livingIn": "Yer",
     "call": "Ara",
-    "estimateYourProject": "Estimate your Project?",
+    "estimateYourProject": "Proje Fikriniz Nedir?",
     "whatIsYourName": "İsminiz ve Soyisminiz",
     "yourEmailAddress": "E-posta Adresiniz",
     "howCanIHelpYou": "Size Nasıl Yardım Edebilirim?",
