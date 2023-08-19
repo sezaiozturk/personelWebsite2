@@ -3,9 +3,12 @@ import useStyle from "./stylesheet";
 import { Button, useNCoreLocalization, useNCoreTheme, Text } from "ncore-web";
 
 const WelcomeSection = ({ sectionRef }) => {
-  const { activeTheme, colors } = useNCoreTheme();
+  const { colors } = useNCoreTheme();
   const classes = useStyle({ color: colors });
   const { localize } = useNCoreLocalization();
+  useEffect(() => {
+    window.location.replace("#");
+  }, []);
 
   return (
     <div id="home" className={classes.container} ref={sectionRef}>

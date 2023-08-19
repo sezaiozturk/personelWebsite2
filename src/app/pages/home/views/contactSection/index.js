@@ -1,34 +1,16 @@
 import { Button, Text, useNCoreLocalization, useNCoreTheme } from "ncore-web";
 import { MultiTextInput, TextInput } from "../../../../components";
 import useStyle from "./stylesheet";
-import { Formik, useFormik } from "formik";
+import { Form, Formik } from "formik";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import * as Yup from "yup";
 
 const ContactSection = ({ sectionRef }) => {
   const { colors, activeTheme } = useNCoreTheme();
   const { localize } = useNCoreLocalization();
   const classes = useStyle({ color: colors, theme: activeTheme });
   const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_mc1s4za",
-        "template_yqdpmp9",
-        form.current,
-        "A-t2Cgdf1q5CHH1tk"
-      )
-      .then(
-        (result) => {
-          alert("Mesajınızı Aldım.En kısa zamanda dönüş sağlayacağım.");
-        },
-        (error) => {
-          alert("Beklenmedik hata!!!");
-        }
-      );
-  };
 
   return (
     <div id="contact" className={classes.container} ref={sectionRef}>
@@ -87,31 +69,76 @@ const ContactSection = ({ sectionRef }) => {
           >
             {localize("estimateYourProject")}
           </Text>
-          <Formik initialValues={{ name: "", email: "", subject: "" }}>
-            {({ handleChange }) => (
-              <form className={classes.form} onSubmit={sendEmail} ref={form}>
+          <Formik
+            initialValues={{ name: "", email: "", subject: "" }}
+            validationSchema={Yup.object({
+              name: Yup.string().required(),
+              email: Yup.string().email().required(),
+              subject: Yup.string().required(),
+            })}
+            onSubmit={(values, { resetForm, setSubmitting }) => {
+              setSubmitting(true);
+              emailjs
+                .sendForm(
+                  "service_mc1s4za",
+                  "template_yqdpmp9",
+                  form.current,
+                  "A-t2Cgdf1q5CHH1tk"
+                )
+                .then(
+                  () => {
+                    resetForm();
+                    setSubmitting(false);
+                    alert(
+                      "Mesajınızı Aldım.En kısa zamanda dönüş sağlayacağım."
+                    );
+                  },
+                  () => {
+                    setSubmitting(false);
+                    alert("Beklenmedik hata!!!");
+                  }
+                );
+            }}
+          >
+            {({
+              handleChange,
+              handleSubmit,
+              values,
+              errors,
+              touched,
+              isSubmitting,
+            }) => (
+              <Form className={classes.form} onSubmit={handleSubmit} ref={form}>
                 <TextInput
                   title={`${localize("whatIsYourName")}:`}
                   id="name"
                   onChangeText={handleChange}
+                  value={values.name}
+                  error={errors.name && touched.name}
                 />
+
                 <TextInput
                   title={`${localize("yourEmailAddress")}:`}
                   id="email"
                   onChangeText={handleChange}
+                  value={values.email}
+                  error={errors.email && touched.email}
                 />
                 <MultiTextInput
                   title={`${localize("howCanIHelpYou")}:`}
                   onChangeText={handleChange}
                   id={"subject"}
+                  value={values.subject}
+                  error={errors.subject && touched.subject}
                 />
                 <Button
                   title={localize("send")}
                   spreadBehaviour="free"
                   color={activeTheme === "light" ? "black" : "primary"}
                   type="submit"
+                  disabled={isSubmitting}
                 />
-              </form>
+              </Form>
             )}
           </Formik>
         </div>
@@ -120,3 +147,7 @@ const ContactSection = ({ sectionRef }) => {
   );
 };
 export default ContactSection;
+
+/**
+ *
+ */

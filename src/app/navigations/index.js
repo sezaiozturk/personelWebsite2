@@ -4,7 +4,7 @@ const Navigation = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<Home />} />
+      <Route path="/about" element={<div>denem</div>} />
       <Route
         path="*"
         element={

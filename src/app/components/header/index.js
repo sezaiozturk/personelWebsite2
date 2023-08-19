@@ -18,6 +18,7 @@ const Header = ({ menuData }) => {
           className={classes.logoContainer}
           onClick={() => {
             navigate("/");
+            window.location.replace("#");
           }}
         >
           <span>SEZAİ</span>

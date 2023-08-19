@@ -30,11 +30,11 @@ const Home = () => {
   });
 
   useEffect(() => {
-    welcomeIsVisible && window.location.replace("#");
+    /*welcomeIsVisible && window.location.replace("#");
     aboutIsVisible && window.location.replace("#about");
     resumeIsVisible && window.location.replace("#resume");
     portfolioIsVisible && window.location.replace("#portfolio");
-    contactIsVisible && window.location.replace("#contact");
+    contactIsVisible && window.location.replace("#contact");*/
   }, [
     welcomeIsVisible,
     aboutIsVisible,

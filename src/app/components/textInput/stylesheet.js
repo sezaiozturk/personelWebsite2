@@ -8,6 +8,14 @@ const useStyle = createUseStyles(
       width: "100%",
       gap: "0.8rem",
     },
+    titleContainer: {
+      display: "flex",
+      gap: "1rem",
+      "& span": {
+        color: "red",
+        fontSize: 20,
+      },
+    },
     label: {
       color: ({ color }) => color.black,
       fontFamily: "poppins-regular",
