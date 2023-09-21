@@ -13,11 +13,13 @@ const HireSection = () => {
           <Text variant="title1" color="text">
             {localize("workingMe")}
           </Text>
-          <Button
-            title={localize("hireMe")}
-            spreadBehaviour="free"
-            variant="outlined"
-          />
+          <a href="#contact">
+            <Button
+              title={localize("hireMe")}
+              spreadBehaviour="free"
+              variant="outlined"
+            />
+          </a>
         </div>
       </div>
     </div>

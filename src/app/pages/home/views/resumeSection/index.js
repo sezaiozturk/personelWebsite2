@@ -40,9 +40,19 @@ const ResumeSection = ({ sectionRef }) => {
             {localize("myExperience")}
           </Text>
           <ResumeCard
-            title={"lorem ipsum lorem ipsum"}
-            subTitle={"lorem ipsum lorem ipsum"}
-            message={`lorem ipsum lorem ipsum lorem ipsum sum lorem`}
+            title={localize("experienceTitle1")}
+            subTitle={localize("experienceSubTitle1")}
+            message={""}
+          />
+          <ResumeCard
+            title={localize("experienceTitle2")}
+            subTitle={localize("experienceSubTitle2")}
+            message={""}
+          />
+          <ResumeCard
+            title={localize("experienceTitle3")}
+            subTitle={localize("experienceSubTitle3")}
+            message={""}
           />
 
           <div className={classes.hideContainer} />

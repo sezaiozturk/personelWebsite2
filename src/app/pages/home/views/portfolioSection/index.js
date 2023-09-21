@@ -22,9 +22,21 @@ const PortfolioSection = ({ sectionRef }) => {
         />
         <ProjeCard
           icon={"fa-solid fa-mobile-screen-button fa-4x"}
+          imgUrl={"./assets/images/myLove.png"}
+          title={"myLove"}
+          description={"reactNativeProject"}
+          path={
+            "https://play.google.com/store/apps/details?id=com.sezaiozturk.mylove"
+          }
+        />
+        <ProjeCard
+          icon={"fa-solid fa-mobile-screen-button fa-4x"}
           imgUrl={"./assets/images/ygt.png"}
           title={"softwareDevelopmentCommunity"}
           description={"kotlinProject"}
+          path={
+            "https://play.google.com/store/apps/details?id=com.ktunsdc.software_development_community"
+          }
         />
         <ProjeCard
           icon={"fa-solid fa-mobile-screen-button fa-4x"}
